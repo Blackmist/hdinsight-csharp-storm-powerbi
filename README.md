@@ -8,7 +8,7 @@ This example demonstrates how you can send data to Microsoft Power BI Preview (p
 
 Otherwise, it's a pretty basic word count example.
 
-Since there's currently (4/20/2015,) no official .NET client for Power BI, this code directly talks to the PowerBI REST API. This code was adapted from the [https://github.com/PowerBI/getting-started-for-dotnet](https://github.com/PowerBI/getting-started-for-dotnet) sample.
+Since there's currently (4/20/2015,) no official .NET client for Power BI, this code directly talks to the PowerBI REST API. The code that talks to Power BI was adapted from the [https://github.com/PowerBI/getting-started-for-dotnet](https://github.com/PowerBI/getting-started-for-dotnet) sample.
 
 ## Prerequisites
 
