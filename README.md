@@ -45,3 +45,7 @@ Since there's currently (4/20/2015,) no official .NET client for Power BI, this 
 6. Right-click on the **WordCount** project and select **Submit to Storm on HDInsight**. Select the Storm cluster name and deploy.
 
 Once deployed, the topology will randomly emit sentences, count the occurrence of words, and emit the word and count to Power BI. If you visit http://powerbi.com and login as the user, you will see a new **Words** dataset, which can be used to create reports or a live dashboard. 
+
+##TODO
+
+* Figure out some way to authenticate with a service account/application entry/something other than an AAD user.
