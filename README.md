@@ -34,13 +34,15 @@ Since there's currently (4/20/2015,) no official .NET client for Power BI, this 
 
 4. Open the solution in Visual Studio.
 
-5. Right-click on the **WordCount** project and select properties, then select the **Settings** tab. Fill in the following entries:
+5. Right-click on the **WordCount** project and select properties. Here, you can change the name of the dataset that will be created in Power BI. By default, it is **Words**.
 
-	* **PowerBiClientId**: The Client ID for the application registration you created earlier.
+6. Open the **SCPHost.exe.config** file, find **<OAuth .../>** element, and set the following properties for it:
 
-    * **PowerBiUsername**: An Azure Active Directory account that has access to Power BI.
+	* **Client**: the client ID for the application registration you created earlier.
 
-    * **PowerBiPassword**: The password for the Azure Active Directory account.
+	* **User**: the user name for the Azure Active Directory user that has access to Power BI.
+
+	* **Password**: the user password.
 
 6. Right-click on the **WordCount** project and select **Submit to Storm on HDInsight**. Select the Storm cluster name and deploy.
 
