@@ -4,8 +4,6 @@ This example demonstrates how you can send data to Microsoft Power BI Preview (p
 
 * **Data.cs**: Describes the data object/row that will be sent to Power BI
 
-* **JSONBuilder.cs**: Contains methods used to create the JSON structures expected by Power BI
-
 Otherwise, it's a pretty basic word count example. Power BI posting is handled through [PowerBi.Api.Client](https://github.com/Vtek/PowerBI.Api.Client).
 
 ## Prerequisites
