@@ -17,7 +17,6 @@ namespace WordCount
         // Constructor
         public Splitter(Context ctx)
         {
-            Context.Logger.Info("Splitter constructor called");
             this.ctx = ctx;
 
             // Declare Input and Output schemas
@@ -39,19 +38,14 @@ namespace WordCount
         // Called when a new tuple is available
         public void Execute(SCPTuple tuple)
         {
-            Context.Logger.Info("Execute enter");
-
             // Get the sentance from the tuple
             string sentence = tuple.GetString(0);
             // Split at space characters
             foreach (string word in sentence.Split(' '))
             {
-                Context.Logger.Info("Emit: {0}", word);
                 //Emit each word
                 this.ctx.Emit(new Values(word));
             }
-
-            Context.Logger.Info("Execute exit");
         }
     }
 }

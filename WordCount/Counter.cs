@@ -20,7 +20,6 @@ namespace WordCount
         // Constructor
         public Counter(Context ctx)
         {
-            Context.Logger.Info("Counter constructor called");
             // Set instance context
             this.ctx = ctx;
 
@@ -44,8 +43,6 @@ namespace WordCount
         // Called when a new tuple is available
         public void Execute(SCPTuple tuple)
         {
-            Context.Logger.Info("Execute enter");
-
             // Get the word from the tuple
             string word = tuple.GetString(0);
             // Do we already have an entry for the word in the dictionary?
@@ -56,11 +53,8 @@ namespace WordCount
             // Update the count in the dictionary
             counts[word] = count;
 
-            Context.Logger.Info("Emit: {0}, count: {1}", word, count);
             // Emit the word and count information
             this.ctx.Emit(Constants.DEFAULT_STREAM_ID, new List<SCPTuple> { tuple }, new Values(word, count));
-
-            Context.Logger.Info("Execute exit");
         }
     }
 }

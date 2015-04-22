@@ -26,8 +26,6 @@ namespace WordCount
         {
             this.ctx = ctx;
 
-            Context.Logger.Info("Generator constructor called");
-
             // Declare Output schema
             Dictionary<string, List<Type>> outputSchema = new Dictionary<string, List<Type>>();
             // The schema for the default output stream is
@@ -44,17 +42,13 @@ namespace WordCount
 
         public void NextTuple(Dictionary<string, Object> parms)
         {
-            Context.Logger.Info("NextTuple enter");
             // The sentence to be emitted
             string sentence;
 
             // Get a random sentence
             sentence = sentences[r.Next(0, sentences.Length - 1)];
-            Context.Logger.Info("Emit: {0}", sentence);
             // Emit it
             this.ctx.Emit(new Values(sentence));
-
-            Context.Logger.Info("NextTuple exit");
         }
 
         public void Ack(long seqId, Dictionary<string, Object> parms)

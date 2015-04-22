@@ -13,19 +13,8 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting local test");
-            System.Environment.SetEnvironmentVariable("microsoft.scp.logPrefix", "WordCount-LocalTest");
-            //Initialize the runtime
-            SCPRuntime.Initialize();
-
-            //If we are not running under the local context, throw an error
-            if (Context.pluginType != SCPPluginType.SCP_NET_LOCAL)
-            {
-                throw new Exception(string.Format("unexpected pluginType: {0}", Context.pluginType));
-            }
-            LocalTest tests = new LocalTest();
-            tests.RunTestCase();
-            Console.WriteLine("finished - press any key to continue");
+            Console.WriteLine("No local test - press any key to continue");
+           
             Console.ReadKey();
         }
 

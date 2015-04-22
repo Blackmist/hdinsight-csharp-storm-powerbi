@@ -2,27 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WordCount.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ResourceUri" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://analysis.windows.net/powerbi/api</Value>
-    </Setting>
-    <Setting Name="Authority" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://login.windows.net/common/oauth2/authorize</Value>
-    </Setting>
-    <Setting Name="DatasetUri" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://api.powerbi.com/beta/myorg/datasets</Value>
-    </Setting>
-    <Setting Name="PowerBiClientId" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Your Client ID</Value>
-    </Setting>
-    <Setting Name="PowerBiUsername" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">A user with access to Power BI</Value>
-    </Setting>
-    <Setting Name="PowerBiPassword" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">The user password</Value>
-    </Setting>
-    <Setting Name="TableName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">WordCount</Value>
-    </Setting>
     <Setting Name="DatasetName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Words</Value>
     </Setting>
