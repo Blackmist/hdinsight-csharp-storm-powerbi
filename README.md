@@ -48,7 +48,7 @@ Once deployed, the topology will randomly emit sentences, count the occurrence o
 
 The PowerBiBolt.cs file includes logic to create the dataset if it doesn't already exist. This works for this example, since the parallelism hint for the bolt is 1. If you create multiple instances of the bolt, and the multiple instances all try to create a new dataset, Power BI seems to actually allow you to create multiples, all with the same name.
 
-So, for production use, you should create a standalone application that creates the dataset for you, before you deploy a topology with this bolt. To ensure that only one is created.
+So, for production use, you should create a standalone application that creates the dataset for you, before you deploy a topology with this bolt. Look at the **CreateDataset** project in this solution for an example of a standalone application to create the dataset.
 
 ##TODO
 
