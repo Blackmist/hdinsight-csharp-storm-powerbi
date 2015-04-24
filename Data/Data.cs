@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WordCount
+namespace Data
 {
     //Describe WordCount entries
     public class WordCount

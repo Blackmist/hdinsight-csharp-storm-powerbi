@@ -42,7 +42,7 @@ namespace WordCount
         {
             PowerBIClient.Do(api =>
             {
-                var isObjectInsert = api.Insert(datasetId, new WordCount
+                var isObjectInsert = api.Insert(datasetId, new Data.WordCount
                 {
                     Word = tuple.GetString(0),
                     Count = tuple.GetInteger(1)
@@ -64,7 +64,7 @@ namespace WordCount
                 bool datasetExist = api.IsDatasetExist(datasetName);
                 if(!datasetExist)
                 {
-                    bool created = api.CreateDataset(datasetName,false, typeof(WordCount));
+                    bool created = api.CreateDataset(datasetName,false, typeof(Data.WordCount));
                 }
                 //Set the ID to use for the dataset
                 datasetId = api.GetDatasetId(datasetName);
