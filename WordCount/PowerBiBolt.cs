@@ -26,6 +26,9 @@ namespace WordCount
             datasetName = Properties.Settings.Default.DatasetName;
 
             //Get the dataset info (ID). Create the dataset if it doesn't exist
+            //NOTE: for a production scenario, you would want to pre-create
+            //the dataset, since creating multiple bolts would (potentiall) 
+            //result in creating multiple datasets with the same name
             GetDataset();
 
             //Declare Input and Output schemas

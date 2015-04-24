@@ -67,6 +67,11 @@ namespace WordCount
                 },
                 1).fieldsGrouping("splitter", new List<int>() { 0 });
 
+            //NOTE: This tends to work with parallelism hint set to 1.
+            //If you increase this, you should pre-create the dataset
+            //used by the bolt, as multiple instances of the bolt all
+            //trying to create a new dataset will sometimes create
+            //multiple datasets in Power BI, all with the same name.
             topologyBuilder.SetBolt(
                 "PowerBI",
                 PowerBiBolt.Get,

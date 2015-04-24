@@ -48,6 +48,12 @@ Since there's currently (4/20/2015,) no official .NET client for Power BI, this 
 
 Once deployed, the topology will randomly emit sentences, count the occurrence of words, and emit the word and count to Power BI. If you visit http://powerbi.com and login as the user, you will see a new **Words** dataset, which can be used to create reports or a live dashboard. 
 
+##Warning
+
+The PowerBiBolt.cs file includes logic to create the dataset if it doesn't already exist. This works for this example, since the parallelism hint for the bolt is 1. If you create multiple instances of the bolt, and the multiple instances all try to create a new dataset, Power BI seems to actually allow you to create multiples, all with the same name.
+
+So, for production use, you should create a standalone application that creates the dataset for you, before you deploy a topology with this bolt. To ensure that only one is created.
+
 ##TODO
 
 * Figure out some way to authenticate with a service account/application entry/something other than an AAD user.
