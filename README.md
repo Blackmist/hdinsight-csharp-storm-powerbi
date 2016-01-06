@@ -32,7 +32,7 @@ Otherwise, it's a pretty basic word count example. Power BI posting is handled t
 
 5. Right-click on the **WordCount** project and select properties. Here, you can change the name of the dataset that will be created in Power BI. By default, it is **Words**.
 
-6. Open the **SCPHost.exe.config** file, find **<OAuth .../>** element, and set the following properties for it:
+6. Open the **App.config** file, find **<OAuth .../>** element, and set the following properties for it:
 
 	* **Client**: the client ID for the application registration you created earlier.
 
